@@ -148,7 +148,7 @@ def Download():
     count = 1
     for i in searcher(subject).find_all("a"):
         i = str(i)
-        if i.find("li") != -1:
+        if i.find("li") != -1 and i.find(".aspx")== -1:
             start = i.find('href="')+6
             end = i.find('"',start)
             link = 'https://www.pastpapers.pk'+i[start:end]
