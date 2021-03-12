@@ -149,7 +149,7 @@ def Download() -> str :
             if link.find("link.txt") != -1:
                 with open(os.path.join(path,link)) as total_link:
                     length = int(total_link.read())
-                    print(f"\033[1;31;40m[\033[1;32;40m*\033[1;31;40m] Total Links \033[1;37;40m{length}")
+                    print(f"\n\n\033[1;31;40m[\033[1;32;40m*\033[1;31;40m] Please Wait Total Pictures \033[1;37;40m{length}")
 
         for files in z:
             if files.find("logs.txt") != -1:
@@ -222,7 +222,7 @@ def Extract_Links() -> str:
                                 print(f"\033[1;31;40m[\033[1;32;40m*\033[1;31;40m] Link \033[1;37;40m{count}\033[1;31;40m Save in \033[1;32;40m{folder_name_board}\033[1;36;40m/\033[1;32;40m{folder_name_subject}\033[1;36;40m/\033[1;32;40m{year}\033[1;36;40m/\033[1;32;40mlogs.txt")
                                 count += 1
 
-    print(f"\033[1;31;40m[\033[1;32;40m*\033[1;31;40m] Total Links \033[1;37;40m{count-1}")
+    print(f"\033[1;31;40m[\033[1;32;40m*\033[1;31;40m] Total Links \033[1;37;40m{count-1}\n")
     with open(f"{folder_name_board}/{folder_name_subject}/link.txt" ,"w") as w:
         w.write(str(count-1))
     Download()
