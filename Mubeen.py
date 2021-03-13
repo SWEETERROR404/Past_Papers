@@ -149,7 +149,7 @@ def Download() -> str :
             if link.find("link.txt") != -1:
                 with open(os.path.join(path,link)) as total_link:
                     length = int(total_link.read())
-                    print(f"\n\n\033[1;31;40m[\033[1;32;40m*\033[1;31;40m] Please Wait Total Pictures \033[1;37;40m{length}")
+                    print(f"\n      \033[1;32;40mPlease Wait Total Pictures {length}\n")           
 
         for files in z:
             if files.find("logs.txt") != -1:
@@ -167,7 +167,7 @@ def Download() -> str :
                             if pic_link.status_code == 200:
                                 with open(f"{path}/{count}.jpg", 'wb') as f:
                                     f.write(pic_link.content)
-                                    print(f"\033[1;31;40m[\033[1;32;40m*\033[1;31;40m] Picture \033[1;37;40m{count} \033[1;31;40mDownload in \033[1;32;40m{path}/{count}.jpg \033[1;37;40m{int(length) - count} \033[1;32;40mare Left")
+                                    print(f"\033[1;31;40m[\033[1;32;40m*\033[1;31;40m] Picture \033[1;37;40m{count} \033[1;31;40mDownload in \033[1;32;40m{folder_name_board}\033[1;36;40m/\033[1;32;40m{folder_name_subject}\033[1;36;40m/\033[1;32;40m{os.path.basename(path)}\033[1;36;40m/\033[1;32;40m{count}.jpg \033[1;37;40m{int(length) - count} \033[1;32;40mare Left")                                    
                                     count += 1
 
                         except requests.exceptions.MissingSchema:
