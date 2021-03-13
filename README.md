@@ -1,4 +1,1 @@
-# Past_Papers
-pip install requests
-
-pip install bs4
+pip install -r requirments.txt
